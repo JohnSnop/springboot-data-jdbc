@@ -1,0 +1,18 @@
+#debug: true
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: "jdbc:mysql://localhost:3306/springcloud2020?useUnicode=true&characterEncoding=utf-8&useSSL=false\
+    &serverTimezone=GMT%2B8"
+    username: root
+    password: WF##(d/SPhNN73xkJ19EjX/EeReDCehLJkbkx0RxLfCWBhrHUaFMWNxNPD7LdyCqzg2Fq)
+
+
+jasypt:
+  encryptor:
+    bean: wfEncryptorBean
+    property:
+      suffix: )
+      prefix: WF##(
