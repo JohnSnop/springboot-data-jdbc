@@ -7,7 +7,31 @@ spring:
     url: "jdbc:mysql://localhost:3306/springcloud2020?useUnicode=true&characterEncoding=utf-8&useSSL=false\
     &serverTimezone=GMT%2B8"
     username: root
-    password: WF##(d/SPhNN73xkJ19EjX/EeReDCehLJkbkx0RxLfCWBhrHUaFMWNxNPD7LdyCqzg2Fq)
+    password: WF##(hle2wxEjWVIHVZJam7TS8OVlSGz8R8HJQzBLdRghwEoZnzdg2+Nd5cs8c59xYoW3)
+    type: com.alibaba.druid.pool.DruidDataSource
+
+
+    #   数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+#    filters: stat,wall,log4j
+    filters: stat,wall
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+    druid:
+      loginName: admin
+      loginPwd: WF##(d/SPhNN73xkJ19EjX/EeReDCehLJkbkx0RxLfCWBhrHUaFMWNxNPD7LdyCqzg2Fq)
 
 
 jasypt:
@@ -16,3 +40,12 @@ jasypt:
     property:
       suffix: )
       prefix: WF##(
+
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.wf.springboot.domain
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
