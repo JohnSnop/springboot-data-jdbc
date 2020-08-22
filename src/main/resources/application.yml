@@ -33,6 +33,13 @@ spring:
       loginName: admin
       loginPwd: WF##(d/SPhNN73xkJ19EjX/EeReDCehLJkbkx0RxLfCWBhrHUaFMWNxNPD7LdyCqzg2Fq)
 
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      format_sql: true
+
+
 
 jasypt:
   encryptor:

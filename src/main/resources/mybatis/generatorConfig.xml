@@ -44,7 +44,7 @@
                selectByExampleQueryId="false">
 
         </table>-->
-        <table tableName="payment" domainObjectName="Payment"></table>
+        <table tableName="book" domainObjectName="Book"></table>
 
     </context>
 </generatorConfiguration>
